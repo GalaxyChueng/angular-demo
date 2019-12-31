@@ -1,16 +1,41 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ngx-pages',
   template: `
-    <a [routerLink]="['/home']">111</a>
-    <a (click)="handleClick()">222</a>
+    <nz-menux [menus]="menus" [mode]="mode"></nz-menux>
     <router-outlet></router-outlet>
   `,
 })
 
-export class PagesComponent {
-  handleClick() {
-    console.log(111);
+export class PagesComponent implements OnInit, OnDestroy, AfterViewInit {
+  public mode = 'horizontal';
+  public menus: object[] = [{
+      level: 1,
+      title: '首页',
+      path: '/',
+      open: true,
+      icon: 'mail',
+      selected: true,
+      disabled: false,
+    },
+    {
+      level: 1,
+      title: '测试',
+      path: '/test',
+      open: true,
+      icon: 'mail',
+      selected: false,
+      disabled: false,
+    },
+  ];
+
+   public ngOnInit() {
+  }
+
+   public ngAfterViewInit() {
+  }
+
+   public ngOnDestroy() {
   }
 }

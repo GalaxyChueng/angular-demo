@@ -1,13 +1,13 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { PagesComponent } from './pages/pages.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/pages.module')
-      .then(m => m.PagesModule),
-  }
+    component: PagesComponent,
+  },
 ];
 
 const config: ExtraOptions = {

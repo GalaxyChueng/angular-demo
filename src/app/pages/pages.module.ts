@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { HomeComponent } from './home/home.component';
+import { TestModule } from './test/test.module';
+
+import { NzMenuxComponent } from '../@theme/components/nz-menux.component';
 
 @NgModule({
-  imports: [
-    PagesRoutingModule,
-  ],
   declarations: [
     PagesComponent,
-    HomeComponent
+    NzMenuxComponent,
+  ],
+  imports: [
+    CommonModule,
+    RouterModule,
+    PagesRoutingModule,
+    TestModule,
   ],
 })
 export class PagesModule {
