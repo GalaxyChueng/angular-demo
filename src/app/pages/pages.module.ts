@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { TestModule } from './test/test.module';
 
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { NzMenuxComponent } from '../@theme/components/nz-menux.component';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { NzMenuxComponent } from '../@theme/components/nz-menux.component';
   ],
   imports: [
     CommonModule,
+    NgZorroAntdModule,
     RouterModule,
     PagesRoutingModule,
     TestModule,

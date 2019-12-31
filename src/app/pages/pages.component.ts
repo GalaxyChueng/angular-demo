@@ -16,7 +16,6 @@ export class PagesComponent implements OnInit, OnDestroy, AfterViewInit {
       path: '/',
       open: true,
       icon: 'mail',
-      selected: true,
       disabled: false,
     },
     {
@@ -25,7 +24,6 @@ export class PagesComponent implements OnInit, OnDestroy, AfterViewInit {
       path: '/test',
       open: true,
       icon: 'mail',
-      selected: false,
       disabled: false,
     },
   ];

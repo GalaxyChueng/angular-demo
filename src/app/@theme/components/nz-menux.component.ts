@@ -8,4 +8,6 @@ import { Component, Input } from '@angular/core';
 export class NzMenuxComponent {
   @Input() public menus: object[];
   @Input() public mode: object[];
+
+
 }
